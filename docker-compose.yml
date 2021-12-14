@@ -11,21 +11,21 @@ services:
     volumes:
       - ./www/:/www
       - ./keys/:/keys
-#    ports:
-#      - "8095:8081"
+    ports:
+      - "8095:8081"
     networks:
-#      spellsmell:
-#        aliases:
-#          - 'ss-cryptopro'
+      spellsmell:
+        aliases:
+          - 'ss-cryptopro'
       docker-compose_spellsmell:
         aliases:
           - 'ss-cryptopro'
 
 networks:
-#  spellsmell:
-#    ipam:
-#      config:
-#        - subnet: 172.145.0.0/16
-#  spellsmell_spellsmell:
+  spellsmell:
+    ipam:
+      config:
+        - subnet: 172.145.0.0/16
+  spellsmell_spellsmell:
   docker-compose_spellsmell:
-    external: true
+    # external: true
